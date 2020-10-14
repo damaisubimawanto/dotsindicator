@@ -2,6 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'org.jetbrains.dokka-android'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.damaisubimawanto'
 
 android {
   compileSdkVersion 29
@@ -24,8 +26,8 @@ android {
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  testImplementation 'junit:junit:4.12'
-  implementation 'androidx.appcompat:appcompat:1.0.2'
+  testImplementation 'junit:junit:4.13'
+  implementation 'androidx.appcompat:appcompat:1.2.0'
   implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
 
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -53,5 +55,3 @@ buildscript {
     classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:${dokka_version}"
   }
 }
-
-apply from: 'deploy.gradle'

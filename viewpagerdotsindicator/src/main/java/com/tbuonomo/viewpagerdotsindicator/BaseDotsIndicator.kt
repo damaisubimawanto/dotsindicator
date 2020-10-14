@@ -156,6 +156,7 @@ abstract class BaseDotsIndicator @JvmOverloads constructor(context: Context,
   }
 
   private fun refreshDotsSize() {
+    if (dots.size == 0) return
     for (i in 0 until pager!!.currentItem) {
       dots[i].setWidth(dotsSize.toInt())
     }
